@@ -10,13 +10,19 @@
     --section-offset-y: 200px;
     --content-offset-y: 60px;
     --item-offset-y: 16px;
-    --item-border-radius: 16px;
     --fz-14: 14px;
     --fz-18: 18px;
     --fz-28: 28px;
     --fz-50: 50px;
+    --lh-18: 18px;
+    --lh-24: 24px;
     --font-main: "Manrope";
-    --font-secondary: "ProstoOne"
+    --font-secondary: "ProstoOne";
+    --button-padding-y: 18px;
+    --button-padding-x: 25px;
+    --border-radius-16: 16px;
+    --border-radius-40: 40px;
+    --padding-20: 20px;
 }
 
 body {
@@ -87,8 +93,6 @@ body {
 
 //my styles
 
-@import "./components/header";
-
 .overlay {
   position: absolute;
   top: -100%;
@@ -104,4 +108,41 @@ body {
     z-index: 1;
   }
 
+}
+
+.text {
+  font-size: var(--fz-14);
+  font-weight: 400;
+  line-height: var(--lh-18);
+
+  &__h1 {
+    font-size: var(--fz-50);
+  }
+  &__h2 {
+    font-size: var(--fz-28);
+  }
+  &__subheader {
+    font-size: var(--fz-18);
+  }
+}
+
+
+
+@import "./components/header";
+@import "./components/intro";
+
+.button {
+  font-family: var(--font-main);
+  font-size: var(--fz-14);
+  font-weight: 400;
+  line-height: var(--lh-18);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border-radius: var(--border-radius-40);
+  width: fit-content;
+  border: 1px solid #fff;
+  &:hover {
+    color: #fff;
+  }
 }

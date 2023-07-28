@@ -1,0 +1,164 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ProstoOne";
+  font-display: swap;
+  src: url("../fonts/ProstoOne-Regular.woff2") format("woff2"), url("../fonts/ProstoOne-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --main-color: #09051C;
+  --button-color: #4E1AE0;
+  --secondary-button-color: rgba(78, 26, 224, 0.1);
+  --text-color: #fff;
+  --header-color: #E8E8E8;
+  --subheader-color: #CBCBCB;
+  --section-offset-y: 200px;
+  --content-offset-y: 60px;
+  --item-offset-y: 16px;
+  --item-border-radius: 16px;
+  --fz-14: 14px;
+  --fz-18: 18px;
+  --fz-28: 28px;
+  --fz-50: 50px;
+  --font-main: "Manrope";
+  --font-secondary: "ProstoOne" ;
+}
+
+body {
+  font-size: 16px;
+  background: var(--main-color);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: var(--fz-14);
+  font-weight: 400;
+  word-wrap: break-word;
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+input::-moz-placeholder {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+input, input::placeholder {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+.wrapper {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* высота веб-страницы больше или равна высоте окна браузера */
+  margin: 0;
+}
+
+.content {
+  flex: 1; /* если содержимое body меньше высоты окна, то section будет растянут до нужной величины */
+  -ms-flex-preferred-size: auto;
+}
+
+.header {
+  padding: 16px;
+}
+.header__logo {
+  gap: 4px;
+}
+.header .logo__img {
+  width: 46px;
+  height: 46px;
+}
+.header .logo__text {
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.header__list {
+  list-style: none;
+  gap: 16px;
+}
+.header__item .nav__link {
+  color: var(--text-color);
+  font-size: var(--fz-14);
+  font-weight: 400;
+}
+.header .contacts {
+  gap: 8px;
+}
+.header .contacts__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: var(--secondary-button-color);
+  padding: 18px 25px;
+  border-radius: 30px;
+  color: var(--text-color);
+}
+.header .contacts__item-circle {
+  border-radius: 50%;
+  padding: 17px;
+}
+.header .contacts__item svg {
+  width: 20px;
+  height: 20px;
+}

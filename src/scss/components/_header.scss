@@ -1,0 +1,50 @@
+.header {
+    padding: 16px;
+    &__logo {
+        gap: 4px;
+    }
+    .logo__img {
+        width: 46px;
+        height: 46px;
+    }
+    .logo__text {
+        font-size: 16px;
+        font-family: var(--font-secondary);
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &__list {
+        list-style: none;
+        gap: 16px;
+    }
+    &__item {
+        .nav__link {
+            color: var(--text-color);
+            font-size: var(--fz-14);
+            font-weight: 400;
+        }
+    }
+
+    .contacts {
+        gap: 8px;
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            background-color: var(--secondary-button-color);
+            padding: 18px 25px;
+            border-radius: 30px;
+            color: var(--text-color);
+            &-circle {
+                border-radius: 50%;
+                padding: 17px;
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+}

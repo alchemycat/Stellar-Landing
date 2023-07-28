@@ -55,6 +55,7 @@
   --button-padding-y: 18px;
   --button-padding-x: 25px;
   --border-radius-16: 16px;
+  --border-radius-30: 30px;
   --border-radius-40: 40px;
   --padding-20: 20px;
 }
@@ -188,10 +189,27 @@ input, input::placeholder {
   justify-content: center;
   width: fit-content;
   background-color: var(--secondary-button-color);
-  padding: 18px 25px;
-  border-radius: 30px;
+  padding: 14px 25px;
+  border-radius: var(--border-radius-30);
   color: var(--text-color);
-  border: 1px solid #fff;
+  position: relative;
+  padding: 10px 20px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 5px;
+}
+.header .contacts__item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background-image: linear-gradient(45deg, purple, orange);
 }
 .header .contacts__item-circle {
   border-radius: 50%;

@@ -18,9 +18,10 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
+
     <div class="container">
-        <div class="row header__wrapper align-items-center">
-            <div class="col-3">
+        <div class="row header__wrapper align-items-center justify-content-between">
+            <div class="col-2">
                 <a href="#" class="header__logo d-flex align-items-center">
                     <img src="img/logo.png" alt="stellar logo" class="logo__img">
                     <span class="logo__text">
@@ -29,12 +30,12 @@
                 </a>
             </div>
 
-            <div class="col-5">
+            <div class="col-12 col-lg-5">
                 <nav
-                class="header__nav nav collapse d-lg-block"
+                class="header__nav nav d-lg-block collapse"
                 id="navbarToggleExternalContent"
             >
-                <ul class="header__list nav__list d-flex align-items-center">
+                <ul class="header__list nav__list d-flex flex-column flex-lg-row">
                     <li class="header__item nav__item">
                         <a href="#work" class="nav__link">О нас</a>
                     </li>
@@ -58,7 +59,7 @@
             </nav>
             </div>
 
-            <div class="col-4">
+            <div class="col-3">
                 <div class="contacts d-flex align-items-center">
                     <a href="#" class="contacts__item contacts__item-circle">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,14 +71,24 @@
                             <path d="M21.943 5.14047L18.9249 19.3739C18.6972 20.3784 18.1034 20.6285 17.2596 20.1552L12.6609 16.7665L10.442 18.9006C10.1964 19.1462 9.99105 19.3516 9.5178 19.3516L9.84819 14.6681L18.3713 6.96653C18.7418 6.63614 18.2909 6.45309 17.7953 6.78348L7.25867 13.418L2.72255 11.9982C1.73585 11.6902 1.718 11.0115 2.92793 10.5383L20.6706 3.70285C21.4921 3.39478 22.2109 3.8859 21.943 5.14047Z" fill="white"/>
                         </svg>                        
                     </a>
-                    <a href="#" class="contacts__item">
+                    <a href="#" class="contacts__item d-none d-lg-block">
                         +7 (921) 094-83-64
                     </a>
                 </div>
             </div>
+
+            <div class="col-2 d-lg-none">
+                <button class="burger navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </div>
 </header>
+
+			<div class="overlay"></div>
 			<main class="content">
 				
 			</main>

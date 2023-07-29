@@ -58,6 +58,7 @@
   --border-radius-30: 30px;
   --border-radius-40: 40px;
   --padding-20: 20px;
+  --mt-12: 12px;
 }
 
 body {
@@ -415,7 +416,15 @@ input, input::placeholder {
 .about__header {
   font-family: var(--font-secondary);
 }
+.about__subheader {
+  color: var(--subheader-color);
+}
 
+@media (max-width: 767px) {
+  .about__subheader {
+    margin-top: var(--mt-12);
+  }
+}
 .button {
   position: relative;
   font-family: var(--font-main);
@@ -494,9 +503,17 @@ input, input::placeholder {
   z-index: -1;
 }
 
+@media (max-width: 991px) {
+  :root {
+    --fz-18: 16px;
+    --fz-28: 24px;
+    --fz-50: 40px;
+  }
+}
 @media (max-width: 575px) {
   :root {
     --fz-18: 14px;
+    --fz-28: 20px;
     --fz-50: 30px;
     --button-padding-y: 16px;
     --padding-20: 12px;

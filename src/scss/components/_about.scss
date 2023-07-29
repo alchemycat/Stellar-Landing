@@ -3,4 +3,15 @@
     &__header {
         font-family: var(--font-secondary);
     }
+    &__subheader {
+        color: var(--subheader-color);
+    }
+}
+
+@media (max-width: 767px) {
+    .about {
+        &__subheader {
+            margin-top: var(--mt-12);
+        }
+    }
 }

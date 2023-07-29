@@ -1,8 +1,22 @@
 .intro {
     padding-top: 170px;
     padding-bottom: 215px;
+    overflow: hidden;
+
     .container {
         position: relative;
+    }
+    &__img {
+        position: absolute;
+        top: -170px;
+        right: -35px;
+        background-image: url("../img/woman.png");
+        background-repeat: no-repeat;
+        width: 1085px;
+        height: 870px;
+        background-position: center;
+        background-size: contain;
+        z-index: -1;
     }
     &__header {
         color: var(--header-color);
@@ -20,16 +34,10 @@
     &__button {
         margin-top: var(--content-offset-y);
     }
+
     &__desc {
-        position: absolute;
-        right: 70px;
-        bottom: -60px;
-        padding: var(--padding-20);
-        max-width: 201px;
-        border: 1px solid #fff;
-        border-radius: var(--border-radius-16);
-        
-        background: linear-gradient(42deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
-        backdrop-filter: blur(10px);
+        right: 115px;
+        bottom: -120px;
     }
+
 }

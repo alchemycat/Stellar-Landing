@@ -152,11 +152,15 @@ input, input::placeholder {
 }
 .text__subheader {
   font-size: var(--fz-18);
+  line-height: var(--lh-24);
+  font-weight: 400;
 }
 
 .header {
   padding: 16px 0px;
   background: var(--main-color);
+  position: absolute;
+  width: 100%;
 }
 .header__logo {
   gap: 4px;
@@ -279,7 +283,6 @@ input, input::placeholder {
 
 @media (max-width: 991px) {
   .header {
-    position: relative;
     z-index: 2;
   }
   .header .container {
@@ -311,10 +314,9 @@ input, input::placeholder {
   }
 }
 .intro {
-  padding-top: 170px;
+  padding-top: 254px;
   padding-bottom: 215px;
   overflow: hidden;
-  position: absolute;
   width: 100%;
   top: 78px;
 }
@@ -364,7 +366,7 @@ input, input::placeholder {
 }
 @media (max-width: 991px) {
   .intro {
-    padding-top: 60px;
+    padding-top: 138px;
   }
   .intro__img {
     top: -50px;
@@ -383,7 +385,7 @@ input, input::placeholder {
 }
 @media (max-width: 575px) {
   .intro {
-    padding-top: 40px;
+    padding-top: 118px;
     padding-bottom: 0px;
   }
   .intro__subheader {
@@ -407,6 +409,13 @@ input, input::placeholder {
     bottom: 130px;
   }
 }
+.about {
+  padding-top: 100px;
+}
+.about__header {
+  font-family: var(--font-secondary);
+}
+
 .button {
   position: relative;
   font-family: var(--font-main);

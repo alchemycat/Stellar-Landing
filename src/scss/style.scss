@@ -124,12 +124,15 @@ body {
   }
   &__subheader {
     font-size: var(--fz-18);
+    line-height: var(--lh-24);
+    font-weight: 400;
   }
 }
 
 
 @import "./components/header";
 @import "./components/intro";
+@import "./components/about";
 
 .button {
   position: relative;

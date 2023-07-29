@@ -1,10 +1,11 @@
 .intro {
-    padding-top: 170px;
+    padding-top: 254px;
     padding-bottom: 215px;
     overflow: hidden;
-    position: absolute;
+
     width: 100%;
     top: 78px;
+
     .container {
         position: relative;
     }
@@ -59,7 +60,7 @@
 
 @media (max-width: 991px) {
     .intro {
-        padding-top: 60px;
+        padding-top: 138px;
         &__img {
             top: -50px;
             width: 873px;
@@ -82,7 +83,7 @@
 
 @media (max-width: 575px) {
     .intro {
-        padding-top: 40px;
+        padding-top: 118px;
         padding-bottom: 0px;
         &__subheader {
             margin-top: 12px;

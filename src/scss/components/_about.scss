@@ -6,6 +6,10 @@
     &__subheader {
         color: var(--subheader-color);
     }
+    &__cards {
+        margin-top: var(--content-offset-y);
+        padding: 0px 10.5px;
+    }
 }
 
 @media (max-width: 767px) {

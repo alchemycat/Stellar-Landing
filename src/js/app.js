@@ -1,8 +1,9 @@
 import * as flsFunctions from "./modules/functions.js";
+import slider from "./modules/slider.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
-
+	slider();
 
 	const burger = document.querySelector(".burger");
 

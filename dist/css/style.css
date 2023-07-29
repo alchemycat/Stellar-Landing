@@ -54,9 +54,11 @@
   --font-secondary: "ProstoOne";
   --button-padding-y: 18px;
   --button-padding-x: 25px;
+  --border-radius-12: 12px;
   --border-radius-16: 16px;
   --border-radius-30: 30px;
   --border-radius-40: 40px;
+  --padding-16: 16px;
   --padding-20: 20px;
   --mt-12: 12px;
 }
@@ -419,6 +421,10 @@ input, input::placeholder {
 .about__subheader {
   color: var(--subheader-color);
 }
+.about__cards {
+  margin-top: var(--content-offset-y);
+  padding: 0px 10.5px;
+}
 
 @media (max-width: 767px) {
   .about__subheader {
@@ -503,6 +509,42 @@ input, input::placeholder {
   z-index: -1;
 }
 
+.card {
+  max-width: 288px;
+  min-height: 404px;
+  background-repeat: no-repeat;
+  background-size: auto 101%;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-radius: var(--border-radius-16);
+  padding: var(--padding-16);
+}
+.card__desc {
+  font-size: var(--fz-18);
+  line-height: var(--lh-24);
+}
+.card__button {
+  padding: 8px 16px;
+  font-size: var(--fz-18);
+  line-height: var(--lh-24);
+  color: var(--text-color);
+  border-radius: var(--border-radius-12);
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(42deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
+}
+.card__button:hover {
+  color: #fff;
+}
+
+.swiper-slide {
+  width: 288px;
+  height: 404px;
+}
+
 @media (max-width: 991px) {
   :root {
     --fz-18: 16px;
@@ -512,6 +554,7 @@ input, input::placeholder {
 }
 @media (max-width: 575px) {
   :root {
+    --content-offset-y: 24px;
     --fz-18: 14px;
     --fz-28: 20px;
     --fz-50: 30px;
@@ -528,5 +571,16 @@ input, input::placeholder {
   }
   .gradient-block .gradient-bg {
     padding: 12px;
+  }
+  .swiper-slide {
+    width: 260px;
+    height: 365px;
+  }
+  .card {
+    max-width: 100%;
+    min-height: 363px;
+  }
+  .card__button {
+    margin-top: 12px;
   }
 }

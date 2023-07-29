@@ -1,10 +1,6 @@
 .header {
     padding: 16px;
-    &.active {
-        // width: 100%;
-        // position: absolute;
-        background: var(--main-color);
-    }
+    background: var(--main-color);
     &__logo {
         gap: 4px;
     }
@@ -111,13 +107,27 @@
             background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
             border-radius: var(--border-radius-30);
             z-index: -1;
-          }
+        }
         span {
             display: block;
             height: 2px;
             width: 18px;
             border-radius: 16px;
             background-color: var(--text-color);
+            transition: all .3s ease;
+        }
+        &.active {
+            span {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(4px, 4px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(4px, -5px);
+                }
+            }
         }
     }
 

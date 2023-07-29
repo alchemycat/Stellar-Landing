@@ -43,3 +43,28 @@
     }
 
 }
+
+@media (max-width: 1199px) {
+    .intro {
+        &__img {
+            right: -180px;
+        }
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .intro {
+        padding-top: 60px;
+        &__img {
+            top: -50px;
+            width: 873px;
+            height: 800px;
+        }
+        &__desc {
+            right: 43px;
+            bottom: -170px;
+        }
+    }
+}

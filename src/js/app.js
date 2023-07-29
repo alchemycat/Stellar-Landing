@@ -1,9 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
-import slider from "./modules/slider.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
-	slider();
 
 	const burger = document.querySelector(".burger");
 
@@ -23,4 +21,40 @@ document.addEventListener("DOMContentLoaded", () => {
 			burger.classList.remove("active");
 		}
 	}
+
+
+	const slider = () => {
+		new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            loop: true,
+            spaceBetween: 16,
+            breakpoints: {
+              320: {
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+              },
+              575: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+              },
+              768: {
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+              },
+              992: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+              }
+            },
+        });
+
+		new Swiper(".atmo__slider", {
+			navigation: {
+				nextEl: ".atmo__arrow-next",
+				prevEl: ".atmo__arrow-prev",
+			  },
+		});
+	}
+
+	slider();
 });

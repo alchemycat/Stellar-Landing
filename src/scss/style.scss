@@ -146,6 +146,7 @@ body {
   background-clip: padding-box;
   border: solid $border transparent;
   border-radius: var(--border-radius-40);
+  text-align: center;
           
   &:before {
     content: '';
@@ -210,6 +211,48 @@ $height: 94px;
       background: #1E293B;
       margin: $size;
       z-index: -1;
+    }
+  }
+}
+
+
+@media (max-width: 575px) {
+    :root {
+      // --main-color: #09051C;
+      // --button-color: #4E1AE0;
+      // --secondary-button-color: #160c35;
+      // --text-color: #fff;
+      // --header-color: #E8E8E8;
+      // --subheader-color: #CBCBCB;
+      // --section-offset-y: 200px;
+      // --content-offset-y: 60px;
+      // --item-offset-y: 16px;
+      // --fz-14: 14px;
+      --fz-18: 14px;
+      // --fz-28: 28px;
+      --fz-50: 30px;
+      // --lh-18: 18px;
+      // --lh-24: 24px;
+      // --font-main: "Manrope";
+      // --font-secondary: "ProstoOne";
+      --button-padding-y: 16px;
+      // --button-padding-x: 25px;
+      // --border-radius-16: 16px;
+      // --border-radius-30: 30px;
+      // --border-radius-40: 40px;
+      --padding-20: 12px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .gradient-block {
+    position: absolute;
+    width: 178px;
+    height: 72px;
+    .gradient-bg {
+      padding: 12px;
     }
   }
 }

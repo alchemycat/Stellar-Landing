@@ -155,7 +155,7 @@ input, input::placeholder {
 }
 
 .header {
-  padding: 16px;
+  padding: 16px 0px;
   background: var(--main-color);
 }
 .header__logo {
@@ -306,6 +306,9 @@ input, input::placeholder {
     right: auto;
     left: 60px;
   }
+  .header .burger {
+    right: 10.5px;
+  }
 }
 .intro {
   padding-top: 170px;
@@ -349,6 +352,9 @@ input, input::placeholder {
 .intro__desc {
   right: 115px;
   bottom: -120px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 @media (max-width: 1199px) {
@@ -370,6 +376,37 @@ input, input::placeholder {
     bottom: -170px;
   }
 }
+@media (max-width: 767px) {
+  .intro__img {
+    right: -304px;
+  }
+}
+@media (max-width: 575px) {
+  .intro {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+  .intro__subheader {
+    margin-top: 12px;
+  }
+  .intro__button {
+    margin-top: 338px;
+  }
+  .intro__img {
+    width: 539px;
+    height: 425px;
+    right: auto;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .intro__desc {
+    font-size: 12px;
+    line-height: 14px;
+    right: 14px;
+    bottom: 130px;
+  }
+}
 .button {
   position: relative;
   font-family: var(--font-main);
@@ -384,6 +421,7 @@ input, input::placeholder {
   background-clip: padding-box;
   border: solid 1px transparent;
   border-radius: var(--border-radius-40);
+  text-align: center;
 }
 .button:before {
   content: "";
@@ -445,4 +483,24 @@ input, input::placeholder {
   background: #1E293B;
   margin: 1px;
   z-index: -1;
+}
+
+@media (max-width: 575px) {
+  :root {
+    --fz-18: 14px;
+    --fz-50: 30px;
+    --button-padding-y: 16px;
+    --padding-20: 12px;
+  }
+  .button {
+    width: 100%;
+  }
+  .gradient-block {
+    position: absolute;
+    width: 178px;
+    height: 72px;
+  }
+  .gradient-block .gradient-bg {
+    padding: 12px;
+  }
 }

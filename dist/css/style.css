@@ -157,6 +157,9 @@ input, input::placeholder {
 .header {
   padding: 16px;
 }
+.header.active {
+  background: var(--main-color);
+}
 .header__logo {
   gap: 4px;
 }
@@ -239,7 +242,7 @@ input, input::placeholder {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   background: var(--secondary-button-color);
   background-clip: padding-box;
   border: solid 1px transparent;
@@ -286,11 +289,23 @@ input, input::placeholder {
     position: static;
     margin-top: 16px;
   }
+  .header .contacts__item-circle span {
+    padding: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .header .contacts {
+    right: auto;
+    left: 60px;
+  }
 }
 .intro {
   padding-top: 170px;
   padding-bottom: 215px;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 78px;
 }
 .intro .container {
   position: relative;
@@ -373,7 +388,7 @@ input, input::placeholder {
   border-radius: 16px;
   background: linear-gradient(125deg, rgba(255, 255, 255, 0.001), rgba(9, 5, 28, 0.6));
   backdrop-filter: blur(10px);
-  z-index: 10;
+  z-index: 0;
   padding: 14px;
   display: flex;
   align-items: center;

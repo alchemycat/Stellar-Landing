@@ -1,5 +1,10 @@
 .header {
     padding: 16px;
+    &.active {
+        // width: 100%;
+        // position: absolute;
+        background: var(--main-color);
+    }
     &__logo {
         gap: 4px;
     }
@@ -91,7 +96,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 6px;
+        gap: 4px;
         $border: 1px;
         background: var(--secondary-button-color);
         background-clip: padding-box;
@@ -140,11 +145,23 @@
                 position: static;
                 margin-top: 16px;
             }
+            &__item {
+                &-circle {
+                    span {
+                        padding: 14px;
+                    }
+                }
+            }
         }
         
     }
 }
 
 @media (max-width: 575px) {
-
+    .header {
+        .contacts {
+            right: auto;
+            left: 60px;
+        }
+    }
 }

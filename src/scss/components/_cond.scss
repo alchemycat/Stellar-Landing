@@ -122,3 +122,31 @@
         }
     }
 }
+
+@media (max-width: 575px) {
+    .cond {
+        &__item {
+            gap: 16px;
+        }
+
+        &__icon {
+            width: 48px;
+            height: 48px;
+        }
+
+        &__img {
+            left: 50%;
+            transform: translateX(-50%);
+            top: auto;
+            height: 410px;
+            width: 450px;
+            &-wrapper {
+                height: 430px;
+            }
+        }
+
+        &__text {
+            max-width: 350px;
+        }
+    }
+}

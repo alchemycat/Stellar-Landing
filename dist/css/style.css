@@ -1161,3 +1161,25 @@ input, input::placeholder {
     max-width: 450px;
   }
 }
+@media (max-width: 575px) {
+  .cond__item {
+    gap: 16px;
+  }
+  .cond__icon {
+    width: 48px;
+    height: 48px;
+  }
+  .cond__img {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    height: 410px;
+    width: 450px;
+  }
+  .cond__img-wrapper {
+    height: 430px;
+  }
+  .cond__text {
+    max-width: 350px;
+  }
+}

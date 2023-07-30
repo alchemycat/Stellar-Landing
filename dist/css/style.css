@@ -66,6 +66,7 @@
   --mt-16: 16px;
   --mt-24: 24px;
   --mt-40: 40px;
+  --mr-24: 24px;
 }
 
 body {
@@ -201,18 +202,18 @@ input, input::placeholder {
 .gradient-block {
   position: absolute;
   width: 201px;
-  height: 94px;
+  padding: 1px;
 }
 .gradient-block .gradient-bg {
   position: relative;
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 16px;
   background: linear-gradient(125deg, rgba(255, 255, 255, 0.001), rgba(9, 5, 28, 0.6));
   backdrop-filter: blur(10px);
   z-index: 0;
-  padding: 14px;
+  padding: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1050,4 +1051,71 @@ input, input::placeholder {
     width: 155px;
     bottom: 26px;
   }
+}
+.cond {
+  padding-top: var(--section-offset-y);
+  overflow: hidden;
+}
+.cond__header {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  max-width: 360px;
+}
+.cond__list {
+  margin-top: 100px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-offset-y);
+}
+.cond__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mr-24);
+}
+.cond__icon {
+  border-radius: var(--border-radius-16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(14deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+.cond__icon svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+.cond__h3 {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+.cond__text {
+  font-size: var(--fz-18);
+  line-height: var(--lh-24);
+  color: var(--subheader-color);
+  margin-top: var(--mt-16);
+  max-width: 420px;
+}
+.cond__img-wrapper {
+  position: relative;
+}
+.cond__img {
+  position: absolute;
+  top: -200px;
+  left: -125px;
+  width: 900px;
+  height: 940px;
+  background-image: url("../img/condition-woman.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.cond__tip {
+  bottom: 65px;
+  right: 200px;
+  width: 234px;
 }

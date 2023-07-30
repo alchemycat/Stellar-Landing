@@ -1,0 +1,70 @@
+.cond {
+    padding-top: var(--section-offset-y);
+    overflow: hidden;
+    &__header {
+        font-family: var(--font-secondary);
+        text-transform: uppercase;
+        max-width: 360px;
+    }
+    &__list {
+        margin-top: 100px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--content-offset-y);
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--mr-24);
+    }
+    &__icon {
+        border-radius: var(--border-radius-16);
+        border: 1px solid rgba(255,255,255,0.5);
+        background: linear-gradient(14deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        svg {
+            width: 18px;
+            height: 18px;
+            opacity: 0.7;
+        }
+    }
+    &__h3 {
+        font-family: var(--font-secondary);
+        text-transform: uppercase;
+    }
+    &__text {
+        font-size: var(--fz-18);
+        line-height: var(--lh-24);
+        color: var(--subheader-color);
+        margin-top: var(--mt-16);
+        max-width: 420px;
+    }
+
+    &__img-wrapper {
+        position: relative;
+    }
+    
+    &__img {
+        position: absolute;
+        top: -200px;
+        left: -125px;
+        width: 900px;
+        height: 940px;
+        background-image: url('../img/condition-woman.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    &__tip {
+        bottom: 65px;
+        right: 200px;
+        width: 234px;
+    }
+}

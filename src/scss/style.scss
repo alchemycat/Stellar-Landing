@@ -30,6 +30,8 @@
     --margin-40: 40px;
     --mt-12: 12px;
     --mt-16: 16px;
+    --mt-24: 24px;
+    --mt-40: 40px;
 }
 
 body {
@@ -127,6 +129,7 @@ body {
   }
   &__h2 {
     font-size: var(--fz-28);
+    color: var(--header-color);
   }
   &__subheader {
     font-size: var(--fz-18);
@@ -330,3 +333,4 @@ $height: 94px;
 @import "./components/about";
 @import "./components/atmo";
 @import "./components/safe";
+@import "./components/calc";

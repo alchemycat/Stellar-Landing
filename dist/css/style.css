@@ -64,6 +64,8 @@
   --margin-40: 40px;
   --mt-12: 12px;
   --mt-16: 16px;
+  --mt-24: 24px;
+  --mt-40: 40px;
 }
 
 body {
@@ -155,6 +157,7 @@ input, input::placeholder {
 }
 .text__h2 {
   font-size: var(--fz-28);
+  color: var(--header-color);
 }
 .text__subheader {
   font-size: var(--fz-18);
@@ -793,4 +796,104 @@ input, input::placeholder {
   .safe__button {
     width: 90%;
   }
+}
+.calc {
+  padding-top: var(--section-offset-y);
+  overflow: hidden;
+}
+.calc .container {
+  position: relative;
+}
+.calc__wrapper {
+  border-radius: var(--border-radius-16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: var(--padding-40);
+}
+.calc__header {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+.calc__config {
+  margin-top: var(--content-offset-y);
+}
+.calc__config-row:nth-child(2) {
+  margin-top: var(--mt-40);
+}
+.calc__caption {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+.calc__control {
+  margin-top: var(--mt-24);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.calc__button {
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  background: var(--button-color);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.calc__button:disabled {
+  opacity: 0.4;
+}
+.calc__board {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius-16);
+  padding: 15px 40px;
+  background: linear-gradient(14deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
+}
+.calc__desc {
+  position: relative;
+  left: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  width: 366px;
+  font-size: var(--fz-14);
+  line-height: var(--lh-18);
+  font-weight: 400;
+  margin-top: var(--content-offset-y);
+  height: auto;
+}
+.calc__desc .gradient-bg {
+  height: auto;
+  padding: 20px;
+}
+.calc__img {
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+  width: 638px;
+  height: 470px;
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.calc__message {
+  position: absolute;
+  margin-top: 174px;
+  left: 66px;
+}
+.calc__salary {
+  position: absolute;
+  top: 270px;
+  left: 140px;
+  color: #4E1AE0;
+  font-size: 32px;
+  font-weight: 800;
+}
+.calc__text {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-color);
+  text-align: center;
+  font-size: var(--fz-14);
+  line-height: var(--lh-18);
 }

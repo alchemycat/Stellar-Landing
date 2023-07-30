@@ -1119,3 +1119,45 @@ input, input::placeholder {
   right: 200px;
   width: 234px;
 }
+
+@media (max-width: 1399px) {
+  .cond__tip {
+    right: 95px;
+  }
+}
+@media (max-width: 1199px) {
+  .cond__img {
+    top: -145px;
+  }
+  .cond__tip {
+    bottom: 65px;
+    right: -4px;
+  }
+}
+@media (max-width: 991px) {
+  .cond__text {
+    max-width: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .cond__list {
+    margin-top: 40px;
+  }
+  .cond__img {
+    top: auto;
+    height: 580px;
+    left: -17px;
+    width: 650px;
+  }
+  .cond__img-wrapper {
+    height: 480px;
+  }
+  .cond__tip {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cond__text {
+    max-width: 450px;
+  }
+}

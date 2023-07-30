@@ -31,8 +31,8 @@
     --mt-12: 12px;
     --mt-16: 16px;
     --mt-24: 24px;
-    --mt-40: 40px;
     --mr-24: 24px;
+    --mt-40: 40px;
 }
 
 body {
@@ -341,3 +341,8 @@ $height: 94px;
 @import "./components/safe";
 @import "./components/calc";
 @import "./components/cond";
+@import "./components/work";
+
+.d-none {
+  display: none;
+}

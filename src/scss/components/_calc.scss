@@ -83,6 +83,13 @@
         position: absolute;
         margin-top: 174px;
         left: 66px;
+        width: 506px;
+        height: 163px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__salary {
@@ -105,5 +112,160 @@
         font-size: var(--fz-14);
         line-height: var(--lh-18);
 
+    }
+}
+
+@media (max-width: 1199px) {
+    .calc {
+        &__img {
+            right: 20px;
+            width: 500px;
+            height: 380px;
+            background-size: cover;
+        }
+        &__message {
+            margin-top: 130px;
+            left: 66px;
+            width: 408px;
+            height: 131px;
+        }
+        &__salary {
+            top: 202px;
+            left: 130px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .calc {
+        &__wrapper {
+            padding: 25px;
+        }
+        
+        &__img {
+            right: 0px;
+            width: 375px;
+            height: 275px;
+            background-size: cover;
+        }
+
+        &__message {
+            margin-top: 100px;
+            left: 50px;
+            width: 280px;
+            height: 89px;
+        }
+
+        &__salary {
+            top: 145px;
+            left: 92px;
+            font-size: 25px;
+        }
+
+        &__desc {
+            width: 300px;
+        }
+
+        &__text {
+            font-size: 12px;
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .calc {
+        padding-bottom: 180px;
+        &__wrapper {
+            border: none;
+        }
+        &__phone {
+            height: 275px;
+        }
+        &__img {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 365px;
+            background-size: contain;
+            bottom: -95px;
+        }
+        &__message {
+            margin-top: 132px;
+            left: 76px;
+            width: 335px;
+            height: 107px;
+        }
+        &__salary {
+            top: 185px;
+            left: 121px;
+            font-size: 30px;
+        }
+        &__desc {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            bottom: -168px;
+            width: 480px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .calc {
+        padding-bottom: 45px;
+        &__header {
+            text-align: center;
+        }
+        &__config {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__wrapper {
+            padding: 0px;
+            padding-bottom: 24px;
+        }
+        &__button {
+            width: 48px;
+            height: 48px;
+        }
+        &__board {
+            padding: 14px 40px;
+        }
+        &__img {
+            width: 349px;
+            height: 248px;
+            bottom: 30px;
+            background-size: cover;
+        }
+        &__message {
+            width: 265px;
+            height: 86px;
+            margin-top: 88px;
+            left: 30px;
+        }
+        &__salary {
+            font-size: 16px;
+            top: 137px;
+            left: 69px;
+        }
+        &__desc {
+            width: 327px;
+            font-size: 12px;
+            bottom: -40px;
+            .gradient-bg {
+                padding: 12px;
+            }
+        }
+        &__text {
+            font-size: 7.2px;
+            line-height: 8px;
+            width: 155px;
+            bottom: 26px;
+        }
     }
 }

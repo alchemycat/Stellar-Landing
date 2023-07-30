@@ -286,6 +286,8 @@ input, input::placeholder {
     --fz-50: 40px;
     --section-offset-y: 100px;
     --content-offset-y: 35px;
+    --mt-24: 15px;
+    --mt-40: 25px;
   }
 }
 @media (max-width: 575px) {
@@ -298,6 +300,8 @@ input, input::placeholder {
     --button-padding-y: 16px;
     --padding-20: 12px;
     --mt-16: 8px;
+    --mt-24: 12px;
+    --mt-40: 24px;
   }
   .button {
     width: 100%;
@@ -878,6 +882,13 @@ input, input::placeholder {
   position: absolute;
   margin-top: 174px;
   left: 66px;
+  width: 506px;
+  height: 163px;
+}
+.calc__message img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .calc__salary {
   position: absolute;
@@ -896,4 +907,147 @@ input, input::placeholder {
   text-align: center;
   font-size: var(--fz-14);
   line-height: var(--lh-18);
+}
+
+@media (max-width: 1199px) {
+  .calc__img {
+    right: 20px;
+    width: 500px;
+    height: 380px;
+    background-size: cover;
+  }
+  .calc__message {
+    margin-top: 130px;
+    left: 66px;
+    width: 408px;
+    height: 131px;
+  }
+  .calc__salary {
+    top: 202px;
+    left: 130px;
+  }
+}
+@media (max-width: 991px) {
+  .calc__wrapper {
+    padding: 25px;
+  }
+  .calc__img {
+    right: 0px;
+    width: 375px;
+    height: 275px;
+    background-size: cover;
+  }
+  .calc__message {
+    margin-top: 100px;
+    left: 50px;
+    width: 280px;
+    height: 89px;
+  }
+  .calc__salary {
+    top: 145px;
+    left: 92px;
+    font-size: 25px;
+  }
+  .calc__desc {
+    width: 300px;
+  }
+  .calc__text {
+    font-size: 12px;
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .calc {
+    padding-bottom: 180px;
+  }
+  .calc__wrapper {
+    border: none;
+  }
+  .calc__phone {
+    height: 275px;
+  }
+  .calc__img {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 365px;
+    background-size: contain;
+    bottom: -95px;
+  }
+  .calc__message {
+    margin-top: 132px;
+    left: 76px;
+    width: 335px;
+    height: 107px;
+  }
+  .calc__salary {
+    top: 185px;
+    left: 121px;
+    font-size: 30px;
+  }
+  .calc__desc {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    bottom: -168px;
+    width: 480px;
+  }
+}
+@media (max-width: 575px) {
+  .calc {
+    padding-bottom: 45px;
+  }
+  .calc__header {
+    text-align: center;
+  }
+  .calc__config {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .calc__wrapper {
+    padding: 0px;
+    padding-bottom: 24px;
+  }
+  .calc__button {
+    width: 48px;
+    height: 48px;
+  }
+  .calc__board {
+    padding: 14px 40px;
+  }
+  .calc__img {
+    width: 349px;
+    height: 248px;
+    bottom: 30px;
+    background-size: cover;
+  }
+  .calc__message {
+    width: 265px;
+    height: 86px;
+    margin-top: 88px;
+    left: 30px;
+  }
+  .calc__salary {
+    font-size: 16px;
+    top: 137px;
+    left: 69px;
+  }
+  .calc__desc {
+    width: 327px;
+    font-size: 12px;
+    bottom: -40px;
+  }
+  .calc__desc .gradient-bg {
+    padding: 12px;
+  }
+  .calc__text {
+    font-size: 7.2px;
+    line-height: 8px;
+    width: 155px;
+    bottom: 26px;
+  }
 }

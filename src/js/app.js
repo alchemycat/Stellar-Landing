@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const slider = () => {
 		new Swiper(".mySwiper", {
-            slidesPerView: 4,
-            loop: true,
+            slidesPerView: 'auto',
+			freeMode: true,
             spaceBetween: 16,
             breakpoints: {
               320: {

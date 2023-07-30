@@ -29,6 +29,7 @@
     --padding-40: 40px;
     --margin-40: 40px;
     --mt-12: 12px;
+    --mt-16: 16px;
 }
 
 body {
@@ -139,6 +140,7 @@ body {
 @import "./components/intro";
 @import "./components/about";
 @import "./components/atmo";
+@import "./components/safe";
 
 .button {
   position: relative;

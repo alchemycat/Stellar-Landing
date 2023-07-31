@@ -70,8 +70,8 @@
         padding-top: 138px;
         &__img {
             top: -50px;
-            width: 873px;
-            height: 800px;
+            width: 799px;
+                height: 590px;
         }
         &__desc {
             right: 43px;
@@ -84,6 +84,10 @@
     .intro {
         &__img {
             right: -304px;
+        }
+        &__desc {
+            right: 0px;
+         
         }
     }
 }

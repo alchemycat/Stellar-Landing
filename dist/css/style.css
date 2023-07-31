@@ -556,8 +556,8 @@ input, input::placeholder {
   }
   .intro__img {
     top: -50px;
-    width: 873px;
-    height: 800px;
+    width: 799px;
+    height: 590px;
   }
   .intro__desc {
     right: 43px;
@@ -567,6 +567,9 @@ input, input::placeholder {
 @media (max-width: 767px) {
   .intro__img {
     right: -304px;
+  }
+  .intro__desc {
+    right: 0px;
   }
 }
 @media (max-width: 575px) {
@@ -1225,6 +1228,10 @@ input, input::placeholder {
   }
 }
 @media (max-width: 575px) {
+  .cond__tip {
+    bottom: 10px;
+    width: 100%;
+  }
   .cond__item {
     gap: 16px;
   }
@@ -1240,7 +1247,7 @@ input, input::placeholder {
     width: 450px;
   }
   .cond__img-wrapper {
-    height: 430px;
+    height: 370px;
   }
   .cond__text {
     max-width: 350px;

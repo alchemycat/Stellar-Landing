@@ -139,6 +139,61 @@ body {
   }
 }
 
+.contacts {
+  gap: 8px;
+
+  &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      color: #FFF;
+      $border: 1px;
+      background: var(--secondary-button-color);
+      background-clip: padding-box;
+      border: solid $border transparent;
+      border-radius: var(--border-radius-30);
+      
+      &:before {
+          content: '';
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: 0;
+          margin: -$border;
+          border-radius: inherit;
+          background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
+          border-radius: var(--border-radius-30);
+        }
+
+        span {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--secondary-button-color);
+          z-index: 1;
+          padding: 18px 25px;
+          border-radius: var(--border-radius-30);
+          line-height: 14px;
+
+        }
+
+      &-circle {
+          border-radius: 50%;
+          span {
+              padding: 15px;
+              border-radius: 50%;
+              svg {
+                  width: 20px;
+                  height: 20px;
+              }
+          }
+      }
+
+   
+  }
+}
 
 .button {
   position: relative;
@@ -273,6 +328,23 @@ $height: 94px;
     --mt-24: 15px;
     --mt-40: 25px;
   }
+
+  .contacts {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    &.active {
+        position: static;
+        margin-top: 16px;
+    }
+    &__item {
+        &-circle {
+            span {
+                padding: 14px;
+            }
+        }
+    }
+}
 }
 
 
@@ -304,7 +376,12 @@ $height: 94px;
       --mt-16: 8px;
       --mt-24: 12px;
       --mt-40: 24px;
-    }
+  }
+
+  .contacts {
+      right: auto;
+      left: 60px;
+  }
 
   .button {
     width: 100%;
@@ -344,6 +421,7 @@ $height: 94px;
 @import "./components/work";
 @import "./components/ques";
 @import "./components/desc";
+@import "./components/footer";
 
 .d-none {
   display: none;

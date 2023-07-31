@@ -63,9 +63,17 @@
     }
     
     &__tip {
+        position: absolute;
         bottom: 65px;
         right: 200px;
-        width: 234px;
+        background: linear-gradient(33deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius-16);
+        border: 1px solid rgba(255,255,255,0.5);
+        padding: 20px;
+        max-width: 236px;
+        font-size: var(--fz-14);
+        line-height: var(--lh-18);
     }
 }
 

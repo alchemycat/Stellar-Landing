@@ -32,22 +32,40 @@
         gap: 8px;
     }
     &__button {
+        position: relative;
         border-radius: 50%;
         width: 52px;
         height: 52px;
         background: var(--button-color);
         color: #fff;
-        border: 1px solid rgba(255,255,255,0.5);
+        // border: 1px solid rgba(255,255,255,0.5);
+        $border: 2px;
+        background: var(--button-color);
+        background-clip: padding-box;
+        border: solid $border transparent;
+        border-radius: var(--border-radius-40);
+                
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          margin: -$border;
+          border-radius: inherit;
+          background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
+          border-radius: var(--border-radius-30);
+          z-index: -1;
+        }
         &:disabled {
             opacity: 0.4;
         }
     }
     &__board {
-        border: 1px solid rgba(255,255,255,0.5);
+        border: 2px solid rgba(255,255,255,0.5);
         border-radius: var(--border-radius-16);
         padding: 15px 40px;
         background: linear-gradient(14deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
         backdrop-filter: blur(10px);
+        
     }
 
     &__desc {
@@ -62,15 +80,16 @@
         font-weight: 400;
         margin-top: var(--content-offset-y);
         height: auto;
-        .gradient-bg {
-            height: auto;
-            padding: 20px;
-        }
+        background: linear-gradient(46deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: var(--border-radius-16);
+        border: 1px solid rgba(255,255,255,0.5);
     }
 
     &__img {
         position: absolute;
-        bottom: 0px;
+        bottom: 1px;
         right: 50px;
         width: 638px;
         height: 470px;

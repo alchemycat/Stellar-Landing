@@ -227,11 +227,11 @@ input, input::placeholder {
   background-color: var(--button-color);
   color: var(--text-color);
   width: fit-content;
+  text-align: center;
   background: var(--button-color);
   background-clip: padding-box;
   border: solid 2px transparent;
   border-radius: var(--border-radius-40);
-  text-align: center;
 }
 .button:before {
   content: "";
@@ -662,6 +662,7 @@ input, input::placeholder {
   z-index: 10;
 }
 .atmo__arrow {
+  position: relative;
   border-radius: 50%;
   width: 52px;
   height: 52px;
@@ -669,7 +670,23 @@ input, input::placeholder {
   align-items: center;
   justify-content: center;
   background: var(--button-color);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--button-color);
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: var(--border-radius-40);
+}
+.atmo__arrow:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
+  border-radius: var(--border-radius-30);
+  z-index: -1;
 }
 
 @media (max-width: 1199px) {
@@ -855,18 +872,35 @@ input, input::placeholder {
   gap: 8px;
 }
 .calc__button {
+  position: relative;
   border-radius: 50%;
   width: 52px;
   height: 52px;
   background: var(--button-color);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--button-color);
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: var(--border-radius-40);
+}
+.calc__button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
+  border-radius: var(--border-radius-30);
+  z-index: -1;
 }
 .calc__button:disabled {
   opacity: 0.4;
 }
 .calc__board {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--border-radius-16);
   padding: 15px 40px;
   background: linear-gradient(14deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -884,14 +918,15 @@ input, input::placeholder {
   font-weight: 400;
   margin-top: var(--content-offset-y);
   height: auto;
-}
-.calc__desc .gradient-bg {
-  height: auto;
+  background: linear-gradient(46deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
   padding: 20px;
+  border-radius: var(--border-radius-16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .calc__img {
   position: absolute;
-  bottom: 0px;
+  bottom: 1px;
   right: 50px;
   width: 638px;
   height: 470px;
@@ -1135,9 +1170,17 @@ input, input::placeholder {
   background-position: center center;
 }
 .cond__tip {
+  position: absolute;
   bottom: 65px;
   right: 200px;
-  width: 234px;
+  background: linear-gradient(33deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  max-width: 236px;
+  font-size: var(--fz-14);
+  line-height: var(--lh-18);
 }
 
 @media (max-width: 1399px) {

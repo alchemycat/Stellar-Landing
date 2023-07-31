@@ -70,6 +70,12 @@
           background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
           border-radius: var(--border-radius-30);
           z-index: -1;
+          transition: all .3s ease;
+        }
+        &:hover {
+            &:before {
+                background-color: var(--button-color);
+            }
         }
     }
 }

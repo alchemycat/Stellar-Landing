@@ -154,6 +154,10 @@ body {
       background-clip: padding-box;
       border: solid $border transparent;
       border-radius: var(--border-radius-30);
+      transition: all .3s ease;
+      &:hover {
+        background: var(--button-color);
+      }
       
       &:before {
           content: '';
@@ -211,6 +215,8 @@ body {
   background-clip: padding-box;
   border: solid $border transparent;
   border-radius: var(--border-radius-40);
+
+  transition: all .3s ease;
           
   &:before {
     content: '';
@@ -221,10 +227,14 @@ body {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
     border-radius: var(--border-radius-30);
     z-index: -1;
+    transition: all .3s ease;
   }
 
   &:hover {
     color: #fff;
+    &:before {
+      background-color: var(--button-color);
+    }
   }
 }
 

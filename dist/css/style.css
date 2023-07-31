@@ -1253,7 +1253,70 @@ input, input::placeholder {
 .work__button {
   margin-top: var(--content-offset-y);
 }
+.work__img-wrapper {
+  position: relative;
+}
+.work__img {
+  position: absolute;
+  top: -200px;
+  left: -125px;
+  width: 900px;
+  height: 940px;
+  background-image: url("../img/work-woman.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
 
+@media (max-width: 1199px) {
+  .work__img {
+    top: -145px;
+  }
+}
+@media (max-width: 991px) {
+  .work__img {
+    top: -51px;
+    left: -125px;
+    width: 752px;
+    height: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .work__img {
+    top: auto;
+    height: 580px;
+    left: -17px;
+    width: 650px;
+  }
+  .work__img-wrapper {
+    height: 480px;
+  }
+}
+@media (max-width: 575px) {
+  .work__img {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    height: 410px;
+    width: 450px;
+  }
+  .work__img-wrapper {
+    height: 430px;
+  }
+  .work__top {
+    gap: 8px;
+  }
+  .work__file-wrapper {
+    margin-top: 0px;
+  }
+  .work__input {
+    padding: 14px 20px;
+  }
+  .work__input::placeholder {
+    font-size: 16px;
+  }
+}
 .d-none {
   display: none;
 }

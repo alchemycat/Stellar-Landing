@@ -229,7 +229,7 @@ input, input::placeholder {
   width: fit-content;
   background: var(--button-color);
   background-clip: padding-box;
-  border: solid 1px transparent;
+  border: solid 2px transparent;
   border-radius: var(--border-radius-40);
   text-align: center;
 }
@@ -240,7 +240,7 @@ input, input::placeholder {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: -1px;
+  margin: -2px;
   border-radius: inherit;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
   border-radius: var(--border-radius-30);
@@ -531,11 +531,18 @@ input, input::placeholder {
   margin-top: var(--content-offset-y);
 }
 .intro__desc {
+  position: absolute;
   right: 115px;
   bottom: -120px;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  max-width: 201px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius-16);
+  background: linear-gradient(42deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
 }
 
 @media (max-width: 1199px) {
@@ -768,6 +775,8 @@ input, input::placeholder {
 @media (max-width: 991px) {
   .safe {
     padding-bottom: 90px;
+  }
+  .safe .container {
     position: relative;
   }
   .safe__wrapper {
@@ -775,9 +784,9 @@ input, input::placeholder {
   }
   .safe__button {
     position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -100px;
+    left: 0px;
+    width: 100%;
   }
   .safe__img {
     left: -40px;
@@ -807,7 +816,10 @@ input, input::placeholder {
     top: 45px;
   }
   .safe__button {
-    width: 90%;
+    position: absolute;
+    bottom: -80px;
+    left: 10.5px;
+    width: 96%;
   }
 }
 .calc {

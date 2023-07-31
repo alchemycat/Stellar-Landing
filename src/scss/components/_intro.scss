@@ -39,11 +39,18 @@
     }
 
     &__desc {
+        position: absolute;
         right: 115px;
         bottom: -120px;
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
+        max-width: 201px;
+        padding: 20px;
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: var(--border-radius-16);
+        background: linear-gradient(42deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+        backdrop-filter: blur(10px);
     }
 
 }

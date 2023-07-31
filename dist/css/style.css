@@ -1283,6 +1283,7 @@ input, input::placeholder {
   font-family: var(--font-main);
 }
 .work__file {
+  position: relative;
   font-size: var(--fz-14);
   line-height: var(--lh-18);
   padding: 18px 25px;
@@ -1316,6 +1317,7 @@ input, input::placeholder {
 }
 .work__button {
   margin-top: var(--content-offset-y);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .work__img-wrapper {
   position: relative;

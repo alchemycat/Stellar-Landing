@@ -1185,6 +1185,7 @@ input, input::placeholder {
 }
 .work {
   padding-top: var(--section-offset-y);
+  overflow: hidden;
 }
 .work__header {
   font-family: var(--font-secondary);
@@ -1260,8 +1261,8 @@ input, input::placeholder {
   position: absolute;
   top: -200px;
   left: -125px;
-  width: 900px;
-  height: 940px;
+  width: 810px;
+  height: 875px;
   background-image: url("../img/work-woman.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1317,6 +1318,57 @@ input, input::placeholder {
     font-size: 16px;
   }
 }
+.ques {
+  padding-top: var(--section-offset-y);
+}
+.ques__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mt-16);
+}
+.ques__header {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  max-width: 232px;
+}
+.ques__question {
+  padding: var(--padding-20);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius-16);
+}
+.ques__top {
+  position: relative;
+}
+.ques__top:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.ques__top.active:before {
+  transform: rotate(180deg) translateY(80%);
+}
+.ques__caption {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  font-size: var(--fz-18);
+  line-height: var(--lh-24);
+}
+.ques__answer {
+  margin-top: var(--mt-16);
+  font-size: var(--fz-18);
+  line-height: var(--lh-24);
+  color: var(--subheader-color);
+}
+
 .d-none {
   display: none;
 }

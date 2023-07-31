@@ -57,4 +57,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	slider();
+
+	const questions = () => {
+		try {
+			const e = document.querySelectorAll(".ques__question");
+			e.forEach((e=>{
+				e.addEventListener("click", (t=>{
+					const c = e.querySelector(".ques__caption")
+						, a = e.querySelector(".ques__top");
+					e.classList.contains("collapsed") ? (e.classList.remove("active"),
+					c.classList.remove("active"),
+					a.classList.remove("active")) : (e.classList.add("active"),
+					c.classList.add("active"),
+					a.classList.add("active"))
+				}
+				))
+			}
+			)),
+			e[0].click()
+		} catch {}
+	}
+
+	questions();
 });

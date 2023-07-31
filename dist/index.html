@@ -495,27 +495,35 @@
             <form method="post" action="#">
               <fieldset>
                 <div class="work__top d-flex flex-column">
-                  <input
-                    class="work__input"
-                    placeholder="Имя"
-                    type="text"
-                    name="your-name"
-                  />
-                  <input
+                  <label class="work__input-label">
+                    <input
+                      class="work__input"
+                      placeholder="Имя"
+                      type="text"
+                      name="your-name"
+                    />
+                  </label>
+
+                  <label class="work__input-label">
+                    <input
                     class="work__input work__input-num"
                     placeholder="Возраст"
                     type="number"
                     name="age"
                   />
-                  <input
+                  </label>
+                  <label class="work__input-label">
+                    <input
                     class="work__input"
                     placeholder="Телефон, телеграм или ссылка"
                     type="text"
                     name="phone"
                   />
+                  </label>
+
 
                   <div class="work__file-wrapper">
-                      <label class="work__file" for="photo">Прикрепить фото</label>
+                      <label class="button work__button-file" for="photo">Прикрепить фото</label>
                       <p class="work__tip">
                         *Необязательно
                       </p>
@@ -536,11 +544,14 @@
                 > и на обработку ваших персональных данных 
                 </p>
 
-                <input
-                class="work__button button"
-                type="submit"
-                value="Заполнить анкету"
-              />
+                <label class="work__button button">Заполнить анкету
+                  <input
+                  type="submit"
+                  value="Заполнить анкету"
+                  
+                />
+              </label>
+ 
               </fieldset>
             </form>
           </div>

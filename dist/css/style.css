@@ -334,9 +334,11 @@ input, input::placeholder {
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: linear-gradient(42deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
   backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 .card__button:hover {
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .about-slide {
@@ -1310,17 +1312,40 @@ input, input::placeholder {
   flex-direction: column;
   gap: 15px;
 }
+.work__input-label {
+  position: relative;
+  padding: 15px 20px;
+  max-width: 491px;
+  background: var(--secondary-button-color);
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: var(--border-radius-16);
+  transition: all 0.3s ease;
+}
+.work__input-label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
+  border-radius: var(--border-radius-16);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
 .work__input {
   background-color: transparent;
-  padding: 15px 20px;
-  border-radius: var(--border-radius-16);
-  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: var(--fz-18);
   line-height: var(--lh-24);
   color: var(--text-color);
   font-weight: 400;
   font-family: var(--font-main);
-  max-width: 491px;
+  width: 100%;
+  border: none;
+  outline: none;
 }
 .work__input::placeholder {
   font-size: var(--fz-18);
@@ -1329,13 +1354,9 @@ input, input::placeholder {
   font-weight: 400;
   font-family: var(--font-main);
 }
-.work__file {
+.work__button-file {
   position: relative;
-  font-size: var(--fz-14);
-  line-height: var(--lh-18);
-  padding: 18px 25px;
   border-radius: var(--border-radius-30);
-  border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: var(--secondary-button-color);
   cursor: pointer;
 }
@@ -1363,8 +1384,31 @@ input, input::placeholder {
   display: inline-block;
 }
 .work__button {
+  position: relative;
   margin-top: var(--content-offset-y);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  background: var(--button-color);
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: var(--border-radius-40);
+  transition: all 0.3s ease;
+}
+.work__button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.09));
+  border-radius: var(--border-radius-30);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.work__button input {
+  display: none;
 }
 .work__img-wrapper {
   position: relative;
@@ -1380,6 +1424,9 @@ input, input::placeholder {
   background-size: cover;
   background-position: center center;
   z-index: -1;
+}
+.work #work-submit-button {
+  display: none;
 }
 
 @media (max-width: 1199px) {

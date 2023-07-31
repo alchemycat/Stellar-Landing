@@ -173,7 +173,7 @@ body {
           justify-content: center;
           background: var(--secondary-button-color);
           z-index: 1;
-          padding: 18px 25px;
+          padding: 18px 23px;
           border-radius: var(--border-radius-30);
           line-height: 14px;
 
@@ -231,6 +231,10 @@ body {
     
 $width: 201px;
 $height: 94px;
+
+.gradient-box {
+  padding: 1px;
+}
 
 .gradient-block {
   position: absolute;
@@ -333,7 +337,7 @@ $height: 94px;
     .contacts {
       position: absolute;
       top: 0px;
-      right: 60px;
+      right: 68px;
       &.active {
           position: static;
           margin-top: 16px;
@@ -385,10 +389,13 @@ $height: 94px;
       --mt-40: 24px;
   }
 
-  .contacts {
+  .header {
+    .contacts {
       right: auto;
       left: 60px;
+    }
   }
+  
 
   .button {
     width: 100%;

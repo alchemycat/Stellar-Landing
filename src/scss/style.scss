@@ -329,22 +329,29 @@ $height: 94px;
     --mt-40: 25px;
   }
 
-  .contacts {
-    position: absolute;
-    top: 0px;
-    right: 60px;
-    &.active {
-        position: static;
-        margin-top: 16px;
+  .header {
+    .contacts {
+      position: absolute;
+      top: 0px;
+      right: 60px;
+      &.active {
+          position: static;
+          margin-top: 16px;
+      }
     }
+  }
+  .contacts {
     &__item {
+        span {
+          padding: 18px 20px;
+        }
         &-circle {
             span {
                 padding: 14px;
             }
         }
     }
-}
+  }
 }
 
 

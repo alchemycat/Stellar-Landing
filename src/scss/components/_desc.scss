@@ -1,0 +1,33 @@
+.desc {
+    padding-top: var(--section-offset-y);
+    &__wrapper {
+        gap: var(--mt-24);
+    }
+    &__header {
+        font-family: var(--font-secondary);
+        text-transform: uppercase;
+        max-width: 232px;
+    }
+    &__text {
+        font-size: var(--fz-18);
+        line-height: var(--lh-24);
+        color: var(--subheader-color);
+        max-width: 896px;
+    }
+}
+
+@media (max-width: 991px) {
+    .desc {
+        &__header {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .desc {
+        &__header {
+            max-width: 328px;
+        }
+    }
+}

@@ -1337,6 +1337,9 @@ input, input::placeholder {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--border-radius-16);
 }
+.ques__wrapper {
+  gap: var(--mt-24);
+}
 .ques__top {
   position: relative;
 }
@@ -1369,6 +1372,39 @@ input, input::placeholder {
   color: var(--subheader-color);
 }
 
+@media (max-width: 575px) {
+  .ques__caption {
+    max-width: 90%;
+  }
+}
+.desc {
+  padding-top: var(--section-offset-y);
+}
+.desc__wrapper {
+  gap: var(--mt-24);
+}
+.desc__header {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  max-width: 232px;
+}
+.desc__text {
+  font-size: var(--fz-18);
+  line-height: var(--lh-24);
+  color: var(--subheader-color);
+  max-width: 896px;
+}
+
+@media (max-width: 991px) {
+  .desc__header {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .desc__header {
+    max-width: 328px;
+  }
+}
 .d-none {
   display: none;
 }

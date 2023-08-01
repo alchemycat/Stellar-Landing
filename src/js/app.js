@@ -79,4 +79,93 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	questions();
+
+	const calculator = () => {
+		const salary = document.querySelector('.calc__salary');
+		
+		let event = new Event("changeValue");
+	
+		document.addEventListener("changeValue", (e) => {
+			calcSumm();
+		});
+
+		calcSumm();
+
+		function calcSumm() {
+			const days = document.querySelector('[data-row="days"] .calc__board');
+			const hours = document.querySelector('[data-row="hours"] .calc__board');
+
+
+			const daysValue = days.textContent;
+			const hoursValue = hours.textContent * 1000;
+
+			let summ = +daysValue * +hoursValue * 4;
+
+			summ = summ.toLocaleString("ru-RU");
+
+			salary.textContent = "+ " + summ + "₽";
+		}
+		
+		const changeCalcValues = (parentSelector, initValue = 4, limits = {low: 4, high: 6}) => {
+			const wrapper = document.querySelector(parentSelector);
+	
+			const plus = wrapper.querySelector('[data-action="plus"]');
+			const minus = wrapper.querySelector('[data-action="minus"]');
+			
+			const board = wrapper.querySelector('.calc__board');
+		
+			const { low, high } = limits;
+	
+			board.textContent = initValue;
+	
+			if (initValue === low) {
+				minus.setAttribute('disabled', true);
+			}
+	
+			if (initValue === high) {
+				plus.setAttribute('disabled', true);
+			}
+	
+			plus.addEventListener('click', () => {
+				if (initValue < high) {
+					initValue++;
+					board.textContent = initValue;
+	
+					if (initValue === high) {
+						plus.setAttribute('disabled', true);
+					}
+	
+					if (initValue > low && minus.getAttribute('disabled')) {
+						minus.removeAttribute('disabled');
+					}
+
+					document.dispatchEvent(event);
+				}
+			});
+	
+			minus.addEventListener('click', () => {
+				if (initValue > low) {
+					initValue--;
+					board.textContent = initValue;
+	
+					if (initValue === low) {
+						minus.setAttribute('disabled', true);
+					}
+	
+					if (initValue < high && plus.getAttribute('disabled')) {
+						plus.removeAttribute('disabled');
+					}
+
+					document.dispatchEvent(event);
+				}
+			})
+	
+		}
+	
+		changeCalcValues('[data-row="days"]', 4, {low: 4, high: 6});
+		changeCalcValues('[data-row="hours"]', 6, {low: 6, high: 8});
+	}
+
+	calculator();
+
 });

@@ -4,13 +4,27 @@ document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
 
 	const burger = document.querySelector(".burger");
+	const overlay = document.querySelector(".overlay");
+	const intro = document.querySelector(".intro");
+
+	const navLinks = document.querySelectorAll('.nav__link');
+
+	navLinks.forEach(lnk => {
+		lnk.addEventListener('click', () => {
+			try {
+				if (overlay.classList.contains('active')) {
+					burger.click();
+				}
+			} catch(err) {
+				console.log(err.message);
+			}
+		})
+	})
 
 	burger.addEventListener("click", toggleBurger);
 
 	function toggleBurger() {
-		const overlay = document.querySelector(".overlay");
-		const intro = document.querySelector(".intro");
-		const burger = document.querySelector(".burger");
+
 		if (JSON.parse(burger.getAttribute("aria-expanded"))) {
 			overlay.classList.add("active");
 			intro.classList.add("active");

@@ -1,4 +1,5 @@
 import * as flsFunctions from "./modules/functions.js";
+import fancybox from "./modules/fancybox.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	flsFunctions.isWebp();
@@ -181,5 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	calculator();
+
+	fancybox();
 
 });

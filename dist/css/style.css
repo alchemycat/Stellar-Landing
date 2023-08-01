@@ -1470,12 +1470,6 @@ input, input::placeholder {
   .work__file-wrapper {
     margin-top: 0px;
   }
-  .work__input {
-    padding: 14px 20px;
-  }
-  .work__input::placeholder {
-    font-size: 16px;
-  }
 }
 .ques {
   padding-top: var(--section-offset-y);
